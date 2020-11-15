@@ -1,0 +1,33 @@
+// HELPERS
+@import './Helpers/variables';
+@import './Helpers/mixin';
+@import './Helpers/extend';
+
+//VENDORS
+
+// BASES
+@import './Bases/reset';
+@import './Bases/customize';
+
+//LAYOUTS
+@import './Layouts/header';
+@import './Layouts/footer';
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Layouts/info';
+@import './Layouts/viewing'; 
+@import './Layouts/banner';
+@import './Layouts/categories';
+@import './Layouts/students';
+@import './Layouts/partners';
+
+//COMPONENTS
+@import './Components/button';
+@import './Components/cover';
+@import './Components/card';
+
+//PAGES
+@import './Pages/home';
+@import './Pages/admin';
+
+//THEME

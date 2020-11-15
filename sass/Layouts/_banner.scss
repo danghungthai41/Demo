@@ -1,0 +1,103 @@
+.banner {
+    background: $color-black-0;
+    position: relative;
+    .banner__content {
+        margin: 0 auto;
+        width: 100%;
+        padding: 25px 0;
+        &:before {
+            content: "";
+            background: linear-gradient(-45deg, $color-red-0, $color-purple);
+            width: 100%;
+            height: 8px;
+            display: inline-block;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+        }
+        .banner__icon {
+            @include styleText($color-white-0, $fs-7, $fw-0);
+            i {
+                // margin-right: 210px;
+                width: 19%;
+                text-align: center;
+            }
+            .banner__icon__small {
+                margin-right: 0;
+            }
+        }
+        .banner__middle {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            // position: relative;
+            i {
+                @include styleText($color-white-0, 35px, $fw-normal);
+                width: 33.33%;
+                // position: absolute;
+                &:first-child {
+                    padding-top: 65px;
+                    margin-left: 30px;
+                }
+                &:last-child {
+                    padding-top: 65px;
+                    margin-right: 30px;
+                }
+            }
+            .banner__text {
+                max-width: 400px;
+                text-align: center;
+                h3 {
+                    @include styleText($color-white-0, $fs-3, $fw-bold-1);
+                    padding-bottom: $mg-1;
+                }
+                p {
+                    @include styleText($color-white-0, $fs-0, $fw-0);
+                    padding-bottom: $mg-1;
+                }
+                button {
+                    @include buttonStyle(
+                        $color-white-0,
+                        $color-red-0,
+                        $color-trans,
+                        $fs-0,
+                        $fw-bold-0,
+                        $pd-1 + 1,
+                        $pd-1 + 2,
+                        $border-radius-2
+                    );
+                    border-radius: $border-radius-2;
+                    &:hover {
+                        @include hoverButton($color-white-0, $color-red-2, $color-trans, $border-radius-2);
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .banner {
+            .banner__content {
+                i {
+                    display: none;
+                }
+                .banner__middle{
+                    .banner__text{
+                        width: 80%;
+                        margin: auto;
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    .banner {
+        .banner__content {
+            i {
+                display: none !important;
+            }
+        }
+    }
+}

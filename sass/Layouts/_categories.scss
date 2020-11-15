@@ -1,0 +1,39 @@
+.categories{
+    background: $color-white-0;
+    .categories__cover{
+        width: 90%;
+        margin: 0 auto;
+        padding: $pd-4 0;
+        h3{
+            @include styleText($color-black-0, $fs-3, $fw-bold-1);
+        }
+        .categories__content{
+            .categories__item{
+                display: flex;
+                align-items: center;
+                border: 1px solid $color-gray-7;
+                padding: $pd-1 + 5;
+                width: 100%;
+                margin: $mg-1 - 2 0;
+                text-align: center;
+                box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                transition: all 0.2s;
+                i{
+                    font-size: $fs-3;
+                    padding-right: $pd-1;
+                    width: 60px;
+                }
+                .categories__text{
+                    @include styleText($color-black-3, $fs-0, $fw-2);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                &:hover{
+                    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+                }
+            }
+        }
+    }
+    
+}

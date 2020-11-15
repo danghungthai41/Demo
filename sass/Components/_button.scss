@@ -1,0 +1,18 @@
+.button__white {
+    @include buttonStyle($color-gray-4, $color-white-0, $color-black-light, $fs-0, $fw-bold-0, $pd-1 + 1, $pd-1 + 2, $border-radius-2);
+    &:hover {
+        @include hoverButton($color-black-0, $color-white-0,$color-black-0, $border-radius-2);
+    }
+}
+.button__red {
+    @include buttonStyle($color-white-0, $color-red-0,$color-trans, $fs-0, $fw-bold-0, $pd-1 + 1, $pd-1 + 2, $border-radius-2);
+    &:hover {
+        @include hoverButton($color-white-0, $color-red-2,$color-trans, $border-radius-2);
+    }
+}
+.button--dropup {
+    @include buttonStyle($color-gray-4, $color-white-0, $color-black-light, $fs-1, $fw-bold-0, $pd-0 + 1, $pd-1, $border-radius-2);
+    &:hover {
+        @include hoverButton($color-black-0, $color-white-0,$color-black-0, $border-radius-2);
+    }
+}

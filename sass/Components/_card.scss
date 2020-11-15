@@ -1,0 +1,84 @@
+.card {
+    height: 290px;
+    margin-right: 1px;
+    margin-top: $mg-2;
+    position: relative;
+    .card__overlay {
+        height: 47%;
+        width: 100%;
+        background: $color-black-2;
+        position: absolute;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .card-body {
+        @include styleText($color-black-0, $fs-small, $fw-bold-0);
+        padding-bottom: $pd-2;
+        .card-title {
+            @include styleText($color-black-0, $fs-0, $fw-bold-0);
+            display: block;
+            height: 42px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .card-text {
+            @include styleText($color-gray-4, $fs-1 - 1, $fw-normal);
+            margin-bottom: $mg-1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .card__stars {
+            i {
+                @include styleText($color-yellow, $fs-1 - 2, $fw-6);
+            }
+            .card__rate {
+                @include styleText($color-gray-4, $fs-1, $fw-bold-0);
+            }
+            .card__total {
+                @include styleText($color-gray-4, $fs-1, $fw-normal);
+            }
+        }
+        .card__price {
+            text-align: right;
+            padding: $pd-1 - 2 0;
+            span {
+                &:first-child {
+                    @include styleText($color-gray-4, $fs-1, $fw-normal);
+                    text-decoration: line-through;
+                }
+                &:last-child {
+                    @include styleText($color-black-0, $fs-5, $fw-bold-1);
+                    margin-left: $mg-1;
+                }
+            }
+        }
+    }
+}
+
+.card--feedback {
+    height: 270px;
+    box-shadow: 0 1px 3px 0 rgba(20,23,28,.15);
+    .card-body {
+        padding: 2rem;
+        .card__top{
+            display: flex;
+            align-items: center;
+            margin-bottom: $mg-3 - 1;
+        }
+        .card__avatar {
+            margin-right: $mg-3;
+            img {
+                width: 64px;
+                height: 64px;
+                border-radius: $border-radius-circle;
+            }
+        }
+        .card-word{
+            @include styleText($color-black-0, $fs-0,$fw-normal);
+        }
+    }
+}

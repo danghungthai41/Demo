@@ -1,0 +1,60 @@
+// .students {
+//     .students__content {
+//         width: 90%;
+//         margin: 0 auto;
+//         h3{
+//             @include styleText($color-black-0, $fs-3, $fw-bold-1);
+//             padding-bottom: 16px;
+//         }
+//         .students__item {
+//             padding: 32px;
+//             box-shadow: 0 1px 3px 0 rgba(20, 23, 28, 0.15);
+//             border-radius: 3px;
+//             background-color: $color-white-0;
+//             // height: 100%;
+//             height: 260px;
+//             .students__img {
+//                 display: flex;
+//                 align-items: center;
+//                 margin-bottom: 18px;
+//                 span{
+//                     @include styleText($color-black-0, $fs-0 + 1, $fw-bold-1);
+//                 }
+//                 img {
+//                     width: 64px;
+//                     height: 64px;
+//                     border-radius: 50%;
+//                     margin-right: 18px;
+//                 }
+//                 .students__kathy {
+//                     border: 1px solid $color-white-0;
+//                     width: 64px;
+//                     height: 64px;
+//                     line-height: 64px;
+//                     @include styleText($color-white-0, $fs-5, $fw-2);
+//                     text-align: center;
+//                     border-radius: $border-radius-circle;
+//                     display: block;
+//                     background-color: $color-gray-4;
+//                     margin-right: 18px;
+//                 }
+//             }
+//             .students__text {
+//                 @include styleText($color-black-0, $fs-0 + 1, $fw-2);
+//             }
+//         }
+//     }
+// }
+.students{
+    padding: $pd-5 0;
+    background: $color-gray-5;
+    .students__content{
+        width: 90%;
+        margin: 0 auto;
+        h2{
+          font-size: $fs-3; 
+          font-weight: 700; 
+        //   margin-bottom: $mg-2 - 5;
+        }
+    }
+}

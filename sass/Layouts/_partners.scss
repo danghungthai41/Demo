@@ -1,0 +1,59 @@
+.partners{
+    border-bottom: 1px solid $color-gray-7;
+    background: $color-gray-5;
+    .partners__top{
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: $pd-3;
+        p{
+            @include styleText($color-gray-4, $fs-1, $fw-0);
+            text-align: center;
+            padding-top: $pd-2 - 4;
+            margin-bottom: 0;
+        }
+        .partners__logo{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-top: $pd-5;
+            .partners__item{
+                margin: 0 $pd-5 $mg-1 - 2;
+                cursor: pointer;
+            }
+        }
+    }
+    .partners__bottom{
+        .partners__content{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: $mg-3;
+            .partners__text{
+                padding: $pd-3 + 4 $pd-5 - 2;
+                a, h3{
+                    text-decoration: none;
+                    @include styleText($color-black-light, $fs-2 - 1, $fw-bold-1);
+                    line-height: 1.47em;
+                }
+                p{
+                    @include styleText($color-black-0, $fs-0 + 1, $fw-2);
+                    padding-top: $pd-0 - 2;
+                    line-height: 1.5em;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                button {
+                    @include buttonStyle($color-white-0, $color-red-0,$color-trans, $fs-0, $fw-bold-0, $pd-1 + 1, $pd-1 + 2, $border-radius-2);
+                    margin-top: 1em;
+                    &:hover {
+                        @include hoverButton($color-white-0, $color-red-2,$color-trans, $border-radius-2);
+                    }
+                }
+            }
+            .partners__border{
+                border-right: 1px solid $color-gray-6;
+            }
+
+        }
+    }
+}

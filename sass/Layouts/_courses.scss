@@ -1,0 +1,85 @@
+.courses {
+    margin: $mg-2 0;
+    .courses__content {
+        width: 91%;
+        margin: 0 auto;
+        .courses__left {
+            background: $color-gray-5;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            h3 {
+                @include styleText($color-black-0, $fs-5 - 1, $fw-bold-1);
+            }
+        }
+        .courses__right {
+            width: 100%;
+            .nav-tabs {
+                flex-wrap: unset;
+                .nav-item {
+                    width: 100%;
+                    text-align: center;
+                    .nav-link {
+                        white-space: normal;
+                    }
+                }
+            }
+            #myTab {
+                .nav-item {
+                    .nav-link {
+                        height:100%;
+                        @include styleText($color-black-0, $fs-0 - 2, $fw-normal);
+                        &:hover {
+                            border: 1px solid $color-trans;
+                            color: $color-blue;
+                            transition: all 0.5s;
+                        }
+                        &.active {
+                            outline: none;
+                            border: none;
+                            border-bottom: 4px solid $color-blue;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .courses__content {
+            .courses__left {
+                display: none;
+            }
+        }
+    }
+    @include responsive("medium") {
+        .courses__right {    
+            .nav-tabs {
+                .nav-item {
+                    text-align: center;
+                    font-size: 10px;
+                    width: 20%;
+                    display:block;
+                    white-space: unset;
+                    .nav-link {
+                        padding: 0 $pd-0;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .courses__right {
+            .nav-tabs{
+                flex-wrap: wrap;
+            }
+            .nav-item {
+                .nav-link {
+                    font-size: 11px !important;
+                }
+            }
+        }
+    }
+
+}
